@@ -1,0 +1,9 @@
+Marcel,Java,true
+Kai,Java,true
+John,Data,false
+Omar,Java,false
+maryam,java,true
+bob,data,false
+bill,software,false
+paul,java,true
+jeff,ux/ui,false
