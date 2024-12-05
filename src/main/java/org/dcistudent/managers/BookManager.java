@@ -21,8 +21,7 @@ public class BookManager {
     }
 
     private void migrate() {
-        String csv = EntityCsvHydrator.hydrate(BooksFixture.BOOK_LIST);
-        this.persist(csv);
+        this.persist(BooksFixture.BOOK_LIST);
     }
 
     public Map<Integer, Book> findAll() {
@@ -39,12 +38,12 @@ public class BookManager {
         ;
     }
 
-    public void persist(String csv) {
+    public void persist(Map<Integer, Book> books) {
         BufferedWriter writer;
 
         try(FileWriter writerFile = new FileWriter(FILE_PATH)) {
             writer = new BufferedWriter(writerFile);
-            writer.write(csv);
+            writer.write(EntityCsvHydrator.hydrate(books));
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,7 +57,7 @@ public class BookManager {
                 books.put(k, book);
             }
         });
-        this.persist(EntityCsvHydrator.hydrate(books));
+        this.persist(books);
     }
 
     private void createFile() {
