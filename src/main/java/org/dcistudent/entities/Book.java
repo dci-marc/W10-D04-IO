@@ -11,7 +11,7 @@ public class Book {
     private String author;
     private Integer numberOfPages;
     private Boolean bestseller;
-    private Boolean isAvailable;
+    private Boolean available;
     private LocalDate borrowedDate;
     private LocalDate dueDate;
     private LocalDate handBackDate;
@@ -30,7 +30,7 @@ public class Book {
         this.setAuthor(author);
         this.setNumberOfPages(numberOfPages);
         this.setBestseller(bestseller);
-        this.setIsAvailable(isAvailable);
+        this.setAvailable(isAvailable);
         this.setBorrowedDate(borrowedDate);
         this.setDueDate(dueDate);
         this.setHandBackDate(handBackDate);
@@ -44,7 +44,7 @@ public class Book {
                 this.getAuthor(),
                 this.getNumberOfPages(),
                 this.getBestseller(),
-                this.getIsAvailable(),
+                this.getAvailable(),
                 this.getBorrowedDate(),
                 this.getDueDate(),
                 this.getHandBackDate())

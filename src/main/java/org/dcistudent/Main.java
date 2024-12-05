@@ -19,7 +19,7 @@ public class Main {
         Book book = service.getByTitle("The Alchemist");
         System.out.println(book);
         System.out.println("=====================================");
-        book.setIsAvailable(false);
+        book.setAvailable(false);
         System.out.println(book);
         System.out.println("=====================================");
         service.saveBook(book);
