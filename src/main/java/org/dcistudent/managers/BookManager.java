@@ -44,7 +44,7 @@ public class BookManager {
         try(FileWriter writerFile = new FileWriter(FILE_PATH)) {
             writer = new BufferedWriter(writerFile);
             writer.write(EntityCsvHydrator.hydrate(books));
-            writer.flush();
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
